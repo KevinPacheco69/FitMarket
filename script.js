@@ -44,7 +44,9 @@ function actualizarMenu(mostrar) {
     : "Menú";
 }
 
-actualizarMenu(false);
+const vistaMovil = window.matchMedia("(max-width: 699px)");
+
+actualizarMenu(!vistaMovil.matches);
 
 botonMenu.addEventListener("click", () => {
   const menuEstaAbierto = botonMenu.getAttribute("aria-expanded") === "true";
