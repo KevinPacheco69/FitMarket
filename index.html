@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FitMarket: equipos de gimnasio, suplementos deportivos y entrenamiento personal.">
+    <title>FitMarket | Todo para tu entrenamiento</title>
+</head>
+<body>
+
+    <header>
+        <a href="#inicio" aria-label="FitMarket, ir al inicio">
+            FitMarket
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#equipos">Equipos</a></li>
+                <li><a href="#suplementos">Suplementos</a></li>
+                <li><a href="#entrenadores">Entrenadores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Todo para tu entrenamiento</h1>
+            <p>
+                Encuentra equipos de gimnasio, suplementos deportivos
+                y servicios de entrenamiento personal en un solo lugar.
+            </p>
+            <a href="#equipos">Explorar productos</a>
+            <a href="#entrenadores">Conocer entrenadores</a>
+        </section>
+
+        <section id="equipos" aria-labelledby="titulo-equipos">
+            <h2 id="titulo-equipos">Equipos de gimnasio</h2>
+            <p>
+                Descubre mancuernas, barras, bancos y accesorios
+                para entrenar en casa o en el gimnasio.
+            </p>
+        </section>
+
+        <section id="suplementos" aria-labelledby="titulo-suplementos">
+            <h2 id="titulo-suplementos">Suplementos deportivos</h2>
+            <p>
+                Explora productos como proteína en polvo y creatina.
+                Consulta siempre las indicaciones y recomendaciones
+                profesionales antes de consumir suplementos.
+            </p>
+        </section>
+
+        <section id="entrenadores" aria-labelledby="titulo-entrenadores">
+            <h2 id="titulo-entrenadores">Entrenamiento personal</h2>
+            <p>
+                Conoce nuestro servicio de entrenamiento personalizado
+                y solicita información sobre los planes disponibles.
+            </p>
+            <a href="#contacto">Solicitar información</a>
+        </section>
+
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contáctanos</h2>
+            <p>
+                ¿Tienes preguntas sobre un producto o deseas contratar
+                un entrenador? Escríbenos.
+            </p>
+
+            <form action="#" method="get">
+                <div>
+                    <label for="nombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="servicio">¿Qué servicio te interesa?</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="equipos">Equipos de gimnasio</option>
+                        <option value="suplementos">Suplementos deportivos</option>
+                        <option value="entrenador">Entrenamiento personal</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">Enviar consulta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FitMarket. Proyecto académico.</p>
+    </footer>
+
+</body>
+</html>
