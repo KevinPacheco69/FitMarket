@@ -39,5 +39,5 @@ la información en el navegador, pero no envía solicitudes a
 un servidor ni procesa pagos reales.
 
 ## Autor
-
+Kevin Pacheco
 Proyecto académico de Aplicaciones Web.
