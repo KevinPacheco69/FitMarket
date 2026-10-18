@@ -306,3 +306,46 @@ footer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+
+/* Menú adaptable */
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#menu-principal {
+  width: 100%;
+}
+
+#menu-principal[hidden] {
+  display: none;
+}
+
+/* En pantallas pequeñas, el menú comienza cerrado */
+@media (max-width: 699px) {
+  header {
+    align-items: stretch;
+  }
+
+  .menu-toggle {
+    align-self: flex-start;
+  }
+
+  #menu-principal ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* En pantallas grandes, se muestra la navegación horizontal */
+@media (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #menu-principal {
+    width: auto;
+  }
+}

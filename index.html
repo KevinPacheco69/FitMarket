@@ -15,7 +15,17 @@
     <header>
       <a href="#inicio" aria-label="FitMarket, ir al inicio"> FitMarket </a>
 
-      <nav aria-label="Navegación principal">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+      >
+        <span class="menu-toggle-text">Menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="menu-principal" aria-label="Navegación principal">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#equipos">Equipos</a></li>
