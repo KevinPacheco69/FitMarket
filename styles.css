@@ -1,0 +1,229 @@
+/* 1. Variables globales */
+:root {
+    --color-fondo: #101714;
+    --color-superficie: #1b2720;
+    --color-acento: #a3f36b;
+    --color-texto: #f5f7f5;
+    --color-texto-secundario: #c3cec6;
+    --color-borde: #3b4b40;
+
+    --ancho-contenido: 1100px;
+    --radio-borde: 12px;
+    --espacio: 1rem;
+}
+
+/* 2. Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    margin: 0;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-acento);
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 4px;
+}
+
+/* 3. Encabezado y navegación */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacio);
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+header > a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    text-decoration: none;
+}
+
+/* 4. Contenido principal */
+main {
+    width: min(100% - 2rem, var(--ancho-contenido));
+    margin-inline: auto;
+}
+
+section {
+    padding-block: 3rem;
+    scroll-margin-top: 1rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+section:first-child {
+    padding-block: 4rem;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+h1 {
+    max-width: 750px;
+    font-size: clamp(2.2rem, 8vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+
+section p {
+    max-width: 65ch;
+    color: var(--color-texto-secundario);
+}
+
+/* 5. Enlaces de acción y botones */
+main a[href^="#"] {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main a[href^="#"]:hover {
+    background: var(--color-superficie);
+}
+
+button {
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    background: var(--color-acento);
+    color: #17220f;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.92);
+}
+
+/* 6. Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 600px;
+    margin-top: 1.5rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem;
+    border: 1px solid #7c8d80;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #17220f;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 7. Pie de página */
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-texto-secundario);
+}
+
+/* 8. Adaptación para tabletas */
+@media (min-width: 700px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    section {
+        padding-block: 4rem;
+    }
+}
+
+/* 9. Adaptación para computadoras */
+@media (min-width: 1000px) {
+    main {
+        width: min(100% - 4rem, var(--ancho-contenido));
+    }
+
+    section:first-child {
+        padding-block: 6rem;
+    }
+}
+
+/* 10. Respeto por la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
