@@ -1,125 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FitMarket: equipos de gimnasio, suplementos deportivos y entrenamiento personal.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FitMarket: equipos de gimnasio, suplementos deportivos y entrenamiento personal."
+    />
     <title>FitMarket | Todo para tu entrenamiento</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <script src="script.js" defer></script>
     <header>
-        <a href="#inicio" aria-label="FitMarket, ir al inicio">
-            FitMarket
-        </a>
+      <a href="#inicio" aria-label="FitMarket, ir al inicio"> FitMarket </a>
 
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#equipos">Equipos</a></li>
-                <li><a href="#suplementos">Suplementos</a></li>
-                <li><a href="#entrenadores">Entrenadores</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#equipos">Equipos</a></li>
+          <li><a href="#suplementos">Suplementos</a></li>
+          <li><a href="#entrenadores">Entrenadores</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="inicio">
-        <section aria-labelledby="titulo-principal">
-            <h1 id="titulo-principal">Todo para tu entrenamiento</h1>
-            <p>
-                Encuentra equipos de gimnasio, suplementos deportivos
-                y servicios de entrenamiento personal en un solo lugar.
-            </p>
-            <a href="#equipos">Explorar productos</a>
-            <a href="#entrenadores">Conocer entrenadores</a>
-        </section>
+      <section aria-labelledby="titulo-principal">
+        <h1 id="titulo-principal">Todo para tu entrenamiento</h1>
+        <p>
+          Encuentra equipos de gimnasio, suplementos deportivos y servicios de
+          entrenamiento personal en un solo lugar.
+        </p>
+        <a href="#equipos">Explorar productos</a>
+        <a href="#entrenadores">Conocer entrenadores</a>
+      </section>
 
-        <section id="equipos" aria-labelledby="titulo-equipos">
-            <h2 id="titulo-equipos">Equipos de gimnasio</h2>
-            <p>
-                Descubre mancuernas, barras, bancos y accesorios
-                para entrenar en casa o en el gimnasio.
-            </p>
-        </section>
+      <section id="equipos" aria-labelledby="titulo-equipos">
+        <h2 id="titulo-equipos">Nuestro catálogo</h2>
+        <p>
+          Encuentra lo que necesitas para entrenar y alcanzar tus objetivos.
+        </p>
 
-        <section id="suplementos" aria-labelledby="titulo-suplementos">
-            <h2 id="titulo-suplementos">Suplementos deportivos</h2>
-            <p>
-                Explora productos como proteína en polvo y creatina.
-                Consulta siempre las indicaciones y recomendaciones
-                profesionales antes de consumir suplementos.
-            </p>
-        </section>
+        <div class="filtros" role="group" aria-label="Filtrar productos">
+          <button
+            type="button"
+            class="filtro activo"
+            data-categoria="todos"
+            aria-pressed="true"
+          >
+            Todos
+          </button>
+          <button
+            type="button"
+            class="filtro"
+            data-categoria="equipos"
+            aria-pressed="false"
+          >
+            Equipos
+          </button>
+          <button
+            type="button"
+            class="filtro"
+            data-categoria="suplementos"
+            aria-pressed="false"
+          >
+            Suplementos
+          </button>
+        </div>
 
-        <section id="entrenadores" aria-labelledby="titulo-entrenadores">
-            <h2 id="titulo-entrenadores">Entrenamiento personal</h2>
-            <p>
-                Conoce nuestro servicio de entrenamiento personalizado
-                y solicita información sobre los planes disponibles.
-            </p>
-            <a href="#contacto">Solicitar información</a>
-        </section>
+        <div class="catalogo">
+          <article class="producto" data-categoria="equipos">
+            <img
+              src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=80"
+              alt="Mancuernas utilizadas para ejercicios de fuerza"
+              loading="lazy"
+            />
+            <div class="producto-info">
+              <h3>Mancuernas ajustables</h3>
+              <p>Ideales para entrenar fuerza en casa.</p>
+              <p class="precio">$45.00</p>
+            </div>
+          </article>
 
-        <section id="contacto" aria-labelledby="titulo-contacto">
-            <h2 id="titulo-contacto">Contáctanos</h2>
-            <p>
-                ¿Tienes preguntas sobre un producto o deseas contratar
-                un entrenador? Escríbenos.
-            </p>
+          <article class="producto" data-categoria="equipos">
+            <img
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80"
+              alt="Equipamiento y máquinas en un gimnasio"
+              loading="lazy"
+            />
+            <div class="producto-info">
+              <h3>Accesorios de gimnasio</h3>
+              <p>Complementos para tu rutina de entrenamiento.</p>
+              <p class="precio">$30.00</p>
+            </div>
+          </article>
 
-            <form action="#" method="get">
-                <div>
-                    <label for="nombre">Nombre completo</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        autocomplete="name"
-                        required
-                    >
-                </div>
+          <article class="producto" data-categoria="suplementos">
+            <img
+              src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=700&q=80"
+              alt="Recipientes de suplementos deportivos"
+              loading="lazy"
+            />
+            <div class="producto-info">
+              <h3>Proteína deportiva</h3>
+              <p>Producto de ejemplo para el catálogo.</p>
+              <p class="precio">$38.00</p>
+            </div>
+          </article>
 
-                <div>
-                    <label for="correo">Correo electrónico</label>
-                    <input
-                        type="email"
-                        id="correo"
-                        name="correo"
-                        autocomplete="email"
-                        required
-                    >
-                </div>
+          <article class="producto" data-categoria="suplementos">
+            <img
+              src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=80"
+              alt="Envase de producto de cuidado y nutrición"
+              loading="lazy"
+            />
+            <div class="producto-info">
+              <h3>Creatina monohidratada</h3>
+              <p>Consulta la etiqueta y las indicaciones del producto.</p>
+              <p class="precio">$25.00</p>
+            </div>
+          </article>
+        </div>
 
-                <div>
-                    <label for="servicio">¿Qué servicio te interesa?</label>
-                    <select id="servicio" name="servicio" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="equipos">Equipos de gimnasio</option>
-                        <option value="suplementos">Suplementos deportivos</option>
-                        <option value="entrenador">Entrenamiento personal</option>
-                    </select>
-                </div>
+        <p id="resultado-filtro" class="mensaje-filtro" aria-live="polite"></p>
+      </section>
 
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        rows="4"
-                        required
-                    ></textarea>
-                </div>
+      <section id="suplementos" aria-labelledby="titulo-suplementos">
+        <h2 id="titulo-suplementos">Suplementos deportivos</h2>
+        <p>
+          Explora productos como proteína en polvo y creatina. Consulta siempre
+          las indicaciones y recomendaciones profesionales antes de consumir
+          suplementos.
+        </p>
+      </section>
 
-                <button type="submit">Enviar consulta</button>
-            </form>
-        </section>
+      <section id="entrenadores" aria-labelledby="titulo-entrenadores">
+        <h2 id="titulo-entrenadores">Entrenamiento personal</h2>
+        <p>
+          Conoce nuestro servicio de entrenamiento personalizado y solicita
+          información sobre los planes disponibles.
+        </p>
+        <a href="#contacto">Solicitar información</a>
+      </section>
+
+      <section id="contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contáctanos</h2>
+        <p>
+          ¿Tienes preguntas sobre un producto o deseas contratar un entrenador?
+          Escríbenos.
+        </p>
+
+        <form action="#" method="get">
+          <div>
+            <label for="nombre">Nombre completo</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="servicio">¿Qué servicio te interesa?</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Selecciona una opción</option>
+              <option value="equipos">Equipos de gimnasio</option>
+              <option value="suplementos">Suplementos deportivos</option>
+              <option value="entrenador">Entrenamiento personal</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+
+          <button type="submit">Enviar consulta</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 FitMarket. Proyecto académico.</p>
+      <p>&copy; 2026 FitMarket. Proyecto académico.</p>
     </footer>
-
-</body>
+  </body>
 </html>
