@@ -349,3 +349,26 @@ footer {
     width: auto;
   }
 }
+
+/* Mensajes de validación del formulario */
+.mensaje-error {
+  color: #ffb4ab;
+  font-size: 0.9rem;
+}
+
+.mensaje-error:empty {
+  display: none;
+}
+
+[aria-invalid="true"] {
+  border: 2px solid #ffb4ab;
+}
+
+#estado-formulario {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+#estado-formulario:empty {
+  display: none;
+}
